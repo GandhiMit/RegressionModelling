@@ -3,10 +3,11 @@ import numpy
 
 
 def function(dataframe):
-    print(dataframe)
+    pass
 
 
 
 if __name__ == '__main__':
-    df = pd.read_csv("reviews.csv")
-    function(df)
+
+    df= pd.read_csv("realtor-data.zip.csv")
+    function()
