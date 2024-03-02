@@ -30,7 +30,7 @@ def function(test, train):
     train_data_dir = train
     test_data_dir = test
 
-    #  Hyperparameter Tuning
+
     epochs = 10
     batch_size = 12
     image_width, image_height = 150, 150
