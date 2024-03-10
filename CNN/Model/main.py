@@ -30,14 +30,16 @@ def function(test, train):
     train_data_dir = train
     test_data_dir = test
 
-
+    # Hyper-Parameter
     epochs = 10
     batch_size = 12
     image_width, image_height = 150, 150
     input_shape = (image_width, image_height, 3)
+
     # Model
     CNN_model = model(input_shape)
 
+    # Dataframe Generator
     train_datagen = ImageDataGenerator(
         rescale=1. / 255,
         shear_range=0.2,
@@ -46,6 +48,7 @@ def function(test, train):
     )
     test_datagen = ImageDataGenerator(rescale=1. / 255)
 
+    # Generator
     train_generator = train_datagen.flow_from_directory(
         train_data_dir,
         target_size=(image_width, image_height),
@@ -71,6 +74,7 @@ def function(test, train):
 
 
 if __name__ == "__main__":
+
     dir_test = "../Data_set/test"
     dir_train = "../Data_set/train"
     function(dir_test, dir_train)
